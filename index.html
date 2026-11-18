@@ -11,7 +11,6 @@
   #app{position:fixed;inset:0;}
   canvas{display:block;}
 
-  /* ---------- START ---------- */
   #start{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#0e0a06 0%,#050403 70%,#000 100%);transition:opacity 1.4s ease;}
   #start h1{font-size:clamp(26px,5vw,54px);letter-spacing:.35em;font-weight:400;color:#e8dcc0;text-shadow:0 0 20px rgba(255,180,107,.3),0 0 60px rgba(255,180,107,.12);margin-bottom:6px;}
   #start .jp{font-size:clamp(11px,1.5vw,13px);letter-spacing:.5em;color:#7a6d57;margin-bottom:34px;}
@@ -20,7 +19,6 @@
   #start button:hover{border-color:var(--glow);color:#fff;box-shadow:0 0 24px rgba(255,180,107,.25);}
   .hint{margin-top:26px;font-size:10px;letter-spacing:.2em;color:#4e4536;line-height:2;}
 
-  /* ---------- HUD ---------- */
   #hud{position:fixed;inset:0;pointer-events:none;z-index:10;}
   #crosshair{position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:rgba(216,201,168,.5);box-shadow:0 0 6px rgba(255,180,107,.35);transition:background .2s;}
   #prompt{position:absolute;left:50%;top:58%;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:#e8dcc0;background:rgba(10,8,6,.6);padding:6px 14px;border:1px solid rgba(120,105,80,.35);opacity:0;transition:opacity .25s;pointer-events:none;}
@@ -32,7 +30,6 @@
   #noteFlash{position:absolute;left:50%;top:18%;transform:translateX(-50%);font-size:11px;letter-spacing:.2em;color:#ffcf8a;background:rgba(8,6,4,.7);padding:7px 18px;border:1px solid rgba(255,180,107,.35);opacity:0;transition:opacity .5s;}
   #noteFlash.show{opacity:1;}
 
-  /* ---------- NOTE LOG ---------- */
   #notelog{position:fixed;inset:0;z-index:40;display:none;background:rgba(6,5,3,.94);backdrop-filter:blur(4px);padding:6vh 6vw;overflow-y:auto;}
   #notelog.open{display:block;}
   #notelog .page{max-width:680px;margin:0 auto;background:linear-gradient(#15120c,#0d0b07);border:1px solid rgba(120,105,80,.3);padding:40px 44px;color:#c9b992;box-shadow:0 0 60px rgba(0,0,0,.85);}
@@ -44,7 +41,6 @@
   #notelog .empty{color:#5a4f3c;font-style:italic;font-size:12px;}
   #notelog .close-hint{margin-top:30px;text-align:center;font-size:10px;letter-spacing:.25em;color:#6a5f4a;}
 
-  /* ---------- MENU ---------- */
   #menu{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;background:rgba(4,3,2,.95);backdrop-filter:blur(6px);}
   #menu.open{display:flex;}
   #menu .panel{text-align:center;max-width:400px;padding:0 24px;}
@@ -56,22 +52,18 @@
   #menu .setting .opts span{padding:5px 10px;border:1px solid #3a3226;cursor:pointer;font-size:9px;color:#8a7d63;transition:all .2s;}
   #menu .setting .opts span.on{border-color:var(--glow);color:#e8dcc0;background:rgba(255,180,107,.08);}
 
-  /* ---------- ENDING ---------- */
   #ending{position:fixed;inset:0;z-index:70;display:none;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#17130d 0%,#050403 80%);opacity:0;transition:opacity 2.5s ease;padding:0 30px;}
   #ending.show{display:flex;opacity:1;}
   #ending .line{font-size:clamp(15px,2.6vw,22px);letter-spacing:.3em;color:#e8dcc0;margin:8px 0;text-shadow:0 0 24px rgba(255,180,107,.2);}
   #ending .sub{font-size:12px;letter-spacing:.2em;color:#8a7d63;margin-top:24px;line-height:2;max-width:520px;font-style:italic;}
   #ending .small{font-size:10px;letter-spacing:.25em;color:#5a4f3c;margin-top:44px;}
 
-  /* ---------- FADE / FLASH ---------- */
   #fader{position:fixed;inset:0;background:#000;opacity:0;z-index:45;pointer-events:none;transition:opacity .8s ease;}
   #flash{position:fixed;inset:0;background:#fff;opacity:0;z-index:35;pointer-events:none;transition:opacity .1s;}
 
-  /* ---------- VIGNETTE & GRAIN ---------- */
   #vignette{position:fixed;inset:0;pointer-events:none;z-index:8;background:radial-gradient(ellipse at center,transparent 40%,rgba(0,0,0,.65) 100%);}
   #grain{position:fixed;inset:0;pointer-events:none;z-index:9;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
-  /* ---------- TOUCH ---------- */
   #touch{position:fixed;inset:0;z-index:15;display:none;pointer-events:none;}
   #touch .stick{position:absolute;width:110px;height:110px;border-radius:50%;border:1px solid rgba(216,201,168,.28);background:rgba(20,16,10,.35);pointer-events:auto;}
   #touch .stick .knob{position:absolute;width:46px;height:46px;border-radius:50%;left:32px;top:32px;background:rgba(216,201,168,.32);border:1px solid rgba(255,180,107,.45);}
@@ -158,31 +150,25 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 
 /* =====================================================================
    YONAKA NO 405 — scripted narrative psychological horror
+   Complete corrected build
    ===================================================================== */
 
 const state = {
   running:false, started:false,
-  clockMin: 11*60+47,  // 11:47 PM — we track in minutes, then convert
-  clockDisplay:"11:47",
-  gameClock:0, // real seconds since start
+  clockDisplay:"11:47", clockMin: 11*60+47,
+  gameClock:0,
   muted:false, ambLevel:1,
   paused:false, notesOpen:false, ending:false,
-  playerPos:new THREE.Vector3(0,1.55,2.2),
-  yaw:0, pitch:0,
+  playerPos:new THREE.Vector3(0,1.55,1.8),
+  yaw:Math.PI, pitch:0,
   notesFound:{landlord:false, drawing:false, journal:false},
   decisions:{door:null, phone:null, shoji:null, shrine:null, final:null},
-  beats:{}, // beat flags
+  beats:{},
   lastFootstep:0,
-  flickerTimer:0,
-  flickerActive:false,
-  roomName:"main",
-  // silhouette state
-  silDoor1:false, silDoor2:false, silFinal:false,
-  // phone ringing
+  flickerTimer:0, flickerActive:false,
+  silDoor1:false, silFinal:false,
   phoneRinging:false,
-  // shoeji open
   shojiOpen:false,
-  // closet
   closetOpen:false, closetTouched:false,
 };
 
@@ -210,26 +196,19 @@ class Amb {
   }
   build(){
     const ctx = this.ctx;
-    // RAIN — main bed. Brown noise through bandpass.
     const rainSrc = ctx.createBufferSource(); rainSrc.buffer = this.noiseBuffer(8,true); rainSrc.loop=true;
     const rainBP = ctx.createBiquadFilter(); rainBP.type='bandpass'; rainBP.frequency.value=1300; rainBP.Q.value=0.65;
     const rainHP = ctx.createBiquadFilter(); rainHP.type='highpass'; rainHP.frequency.value=280;
     const rainGain = ctx.createGain(); rainGain.gain.value=0.5;
     rainSrc.connect(rainBP).connect(rainHP).connect(rainGain).connect(this.master); rainSrc.start();
     this.nodes.rain = rainGain; this.nodes.rainBP = rainBP;
-
-    // rain droplets (sparse)
     this.nodes.dropGain = ctx.createGain(); this.nodes.dropGain.gain.value=0.12; this.nodes.dropGain.connect(this.master);
     this.dropTimer = setInterval(()=>{ if(Math.random()<0.55) this.droplet(); }, 300);
-
-    // wind on shoji — low filtered noise
     const windSrc = ctx.createBufferSource(); windSrc.buffer = this.noiseBuffer(10,true); windSrc.loop=true;
     const windLP = ctx.createBiquadFilter(); windLP.type='lowpass'; windLP.frequency.value=420;
     const windGain = ctx.createGain(); windGain.gain.value=0.16;
     windSrc.connect(windLP).connect(windGain).connect(this.master); windSrc.start();
     this.nodes.wind = windGain;
-
-    // fluorescent hum — 100Hz with slight harmonic
     const humGain = ctx.createGain(); humGain.gain.value=0.018; humGain.connect(this.master);
     const h1 = ctx.createOscillator(); h1.type='sine'; h1.frequency.value=100;
     const h2 = ctx.createOscillator(); h2.type='sine'; h2.frequency.value=200;
@@ -237,15 +216,11 @@ class Amb {
     h1.connect(humGain); h2.connect(h2g).connect(humGain);
     h1.start(); h2.start();
     this.nodes.hum = humGain;
-
-    // distant cicadas — very faint, high filtered noise
     const cicSrc = ctx.createBufferSource(); cicSrc.buffer = this.noiseBuffer(6,false); cicSrc.loop=true;
     const cicBP = ctx.createBiquadFilter(); cicBP.type='bandpass'; cicBP.frequency.value=5200; cicBP.Q.value=8;
     const cicGain = ctx.createGain(); cicGain.gain.value=0.008;
     cicSrc.connect(cicBP).connect(cicGain).connect(this.master); cicSrc.start();
     this.nodes.cicadas = cicGain;
-
-    // low drone
     const droneGain = ctx.createGain(); droneGain.gain.value=0.0; droneGain.connect(this.master);
     [42, 63].forEach((f,i)=>{
       const o = ctx.createOscillator(); o.type='sine'; o.frequency.value=f;
@@ -277,7 +252,6 @@ class Amb {
   }
   doorbell(){
     if(!this.ctx||this.muted) return;
-    // The iconic Japanese "pin-pon" — two bell tones
     const t = this.ctx.currentTime;
     const notes = [{f:659.25,t:0}, {f:523.25,t:0.35}];
     notes.forEach(n=>{
@@ -295,7 +269,6 @@ class Amb {
   }
   phoneRing(){
     if(!this.ctx||this.muted) return;
-    // old landline ring — two chirps per burst
     const t0 = this.ctx.currentTime;
     let t = t0;
     for(let burst=0;burst<4;burst++){
@@ -314,7 +287,6 @@ class Amb {
     }
   }
   phoneVoice(){
-    // whispered, filtered noise with formant — "Don't look at the shoji at 3:00"
     if(!this.ctx||this.muted) return;
     const t0 = this.ctx.currentTime;
     const src = this.ctx.createBufferSource(); src.buffer = this.noiseBuffer(3,false);
@@ -323,12 +295,10 @@ class Amb {
     g.gain.linearRampToValueAtTime(0.05,t0+0.1);
     g.gain.setValueAtTime(0.05,t0+2.6);
     g.gain.exponentialRampToValueAtTime(0.0001,t0+3.0);
-    // slow amplitude wobble for whisper feel
     const lfo = this.ctx.createOscillator(); lfo.frequency.value=6;
     const lg = this.ctx.createGain(); lg.gain.value=0.03;
     lfo.connect(lg).connect(g.gain); lfo.start(t0); lfo.stop(t0+3.0);
     src.connect(bp).connect(g).connect(this.master); src.start(t0); src.stop(t0+3.0);
-    // subtle tone drift
     bp.frequency.linearRampToValueAtTime(700, t0+1.5);
     bp.frequency.linearRampToValueAtTime(1100, t0+2.8);
   }
@@ -350,17 +320,6 @@ class Amb {
     g.gain.exponentialRampToValueAtTime(0.0001,t+0.12);
     o.connect(g).connect(this.master); o.start(t); o.stop(t+0.14);
   }
-  heartbeat(){
-    if(!this.ctx||this.muted) return;
-    const t = this.ctx.currentTime;
-    [0, 0.18].forEach((delay,i)=>{
-      const o = this.ctx.createOscillator(); o.type='sine'; o.frequency.value=50-i*6;
-      const g = this.ctx.createGain(); g.gain.setValueAtTime(0,t+delay);
-      g.gain.linearRampToValueAtTime(0.07-i*0.03,t+delay+0.03);
-      g.gain.exponentialRampToValueAtTime(0.0001,t+delay+0.28);
-      o.connect(g).connect(this.master); o.start(t+delay); o.stop(t+delay+0.3);
-    });
-  }
   bellChime(){
     if(!this.ctx||this.muted) return;
     const t = this.ctx.currentTime;
@@ -381,7 +340,6 @@ class Amb {
     o.connect(g).connect(this.master); o.start(t); o.stop(t+0.09);
   }
   silenceBed(dur=3){
-    // duck everything to silence — the weapon
     if(!this.ctx) return;
     const t = this.ctx.currentTime;
     this.master.gain.cancelScheduledValues(t);
@@ -394,7 +352,6 @@ class Amb {
   }
   setRainLevel(v){ if(this.nodes.rain && this.started) this.nodes.rain.gain.linearRampToValueAtTime(v, this.ctx.currentTime+1.5); }
   spatializeRain(x){
-    // x is player's world X. Balcony is at z=-3. Closer to balcony = louder rain.
     if(!this.nodes.rain || !this.started) return;
     const nearBalcony = Math.max(0, Math.min(1, 1 - Math.abs(x-0)/3));
     const lvl = 0.35 + nearBalcony*0.45;
@@ -488,23 +445,19 @@ function makeNormalFromHeight(hFn,size=256,strength=2.0){
   return t;
 }
 
-// Tatami — woven green, with border band
 function makeTatami(){
   return canvasTex(512,512,(ctx,w,h)=>{
     ctx.fillStyle='#5a5a3a'; ctx.fillRect(0,0,w,h);
-    // horizontal weave lines
     for(let y=0;y<h;y+=4){
       const v=0.5+0.5*Math.sin(y*0.9);
       ctx.fillStyle=`rgba(${60+v*30},${60+v*25},${30+v*15},0.55)`;
       ctx.fillRect(0,y,w,3);
     }
-    // vertical stipple for rice-straw
     for(let i=0;i<3000;i++){
       const x=Math.random()*w,y=Math.random()*h;
       ctx.fillStyle=`rgba(${100+Math.random()*60},${100+Math.random()*50},${60+Math.random()*30},0.15)`;
       ctx.fillRect(x,y,1,2);
     }
-    // dark border band at edges
     ctx.fillStyle='#1a1410';
     ctx.fillRect(0,0,w,20); ctx.fillRect(0,h-20,w,20);
     ctx.fillStyle='#3a2a1a';
@@ -512,7 +465,6 @@ function makeTatami(){
   },{repeat:1});
 }
 
-// Wood — shoji frame, furniture
 function makeWood(){
   return canvasTex(512,512,(ctx,w,h)=>{
     ctx.fillStyle='#3a2818'; ctx.fillRect(0,0,w,h);
@@ -531,7 +483,6 @@ function makeWood(){
   },{repeat:2});
 }
 
-// Shoji paper — soft off-white, subtle fibers, damp stains
 function makeShojiPaper(){
   return canvasTex(512,512,(ctx,w,h)=>{
     ctx.fillStyle='#d8ceb0'; ctx.fillRect(0,0,w,h);
@@ -544,14 +495,12 @@ function makeShojiPaper(){
       img.data[i+2] *= (1-n*0.2);
     }
     ctx.putImageData(img,0,0);
-    // subtle fiber lines
     for(let i=0;i<200;i++){
       const y=Math.random()*h;
       ctx.strokeStyle=`rgba(180,170,140,${0.05+Math.random()*0.1})`;
       ctx.lineWidth=1;
       ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y+Math.random()*2-1); ctx.stroke();
     }
-    // vertical grid (frame lines)
     ctx.strokeStyle='rgba(60,40,24,0.55)'; ctx.lineWidth=3;
     for(let x=0;x<w;x+=w/4){ ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
     ctx.strokeStyle='rgba(60,40,24,0.35)'; ctx.lineWidth=2;
@@ -559,7 +508,6 @@ function makeShojiPaper(){
   },{repeat:1});
 }
 
-// Wall — muted Japanese wallpaper
 function makeWallpaper(){
   return canvasTex(512,512,(ctx,w,h)=>{
     ctx.fillStyle='#3a3226'; ctx.fillRect(0,0,w,h);
@@ -567,7 +515,6 @@ function makeWallpaper(){
       ctx.fillStyle='#433a2c'; ctx.fillRect(x,0,11,h);
       ctx.fillStyle='#2e271e'; ctx.fillRect(x+17,0,3,h);
     }
-    // small subtle motif
     for(let y=0;y<h;y+=48){
       for(let x=0;x<w;x+=48){
         ctx.strokeStyle='rgba(110,95,70,0.2)'; ctx.lineWidth=1;
@@ -584,7 +531,6 @@ function makeWallpaper(){
   },{repeat:2});
 }
 
-// Concrete exterior (for balcony)
 function makeConcrete(){
   return canvasTex(512,512,(ctx,w,h)=>{
     ctx.fillStyle='#2a2622'; ctx.fillRect(0,0,w,h);
@@ -608,7 +554,6 @@ function makeConcrete(){
 
 const texTatami = makeTatami();
 const texTatamiN = makeNormalFromHeight((u,v)=>{
-  // weave ridges: horizontal stripes + fine noise
   const ridge = Math.abs(Math.sin(v*Math.PI*90))*0.4;
   const n = fbm(u*20,v*20,3,3)*0.3;
   return ridge+n;
@@ -620,10 +565,7 @@ const texWoodN = makeNormalFromHeight((u,v)=>fbm(u*30,v*4,3,9)*0.7,256,1.3);
 texWoodN.repeat.set(2,2);
 
 const texShoji = makeShojiPaper();
-const texShojiN = makeNormalFromHeight((u,v)=>{
-  // subtle paper bumps
-  return fbm(u*20,v*20,3,5)*0.3;
-},256,0.7);
+const texShojiN = makeNormalFromHeight((u,v)=>fbm(u*20,v*20,3,5)*0.3,256,0.7);
 texShojiN.repeat.set(1,1);
 
 const texWall = makeWallpaper();
@@ -638,7 +580,6 @@ const texConcrete = makeConcrete();
 const texConcreteN = makeNormalFromHeight((u,v)=>fbm(u*18,v*18,5,21)*0.8,256,1.2);
 texConcreteN.repeat.set(2,2);
 
-// Frosted glass — semi-transparent with subtle noise
 const texFrosted = canvasTex(256,256,(ctx,w,h)=>{
   ctx.fillStyle='#a8b0b0'; ctx.fillRect(0,0,w,h);
   const img=ctx.getImageData(0,0,w,h);
@@ -647,7 +588,6 @@ const texFrosted = canvasTex(256,256,(ctx,w,h)=>{
     img.data[i]+=n; img.data[i+1]+=n; img.data[i+2]+=n;
   }
   ctx.putImageData(img,0,0);
-  // very subtle mottling
   for(let i=0;i<40;i++){
     ctx.fillStyle=`rgba(180,190,190,${Math.random()*0.1})`;
     ctx.beginPath();
@@ -656,13 +596,20 @@ const texFrosted = canvasTex(256,256,(ctx,w,h)=>{
   }
 });
 
-/* ============================ BUILD THE APARTMENT ============================ */
+/* ============================ WORLD SETUP ============================ */
 const world = new THREE.Group();
 scene.add(world);
 const colliders = [];
 function addAABB(x,z,w,d){ colliders.push({minX:x-w/2,maxX:x+w/2,minZ:z-d/2,maxZ:z+d/2}); }
+function wall(x,z,w,h,d,mat){
+  const m = new THREE.Mesh(new THREE.BoxGeometry(w,h,d), mat);
+  m.position.set(x,h/2,z);
+  m.castShadow = m.receiveShadow = true;
+  world.add(m); addAABB(x,z,w,d);
+  return m;
+}
 
-// Materials
+/* ============================ MATERIALS ============================ */
 const matFloorMain = new THREE.MeshStandardMaterial({
   map:texTatami, normalMap:texTatamiN, normalScale:new THREE.Vector2(0.5,0.5),
   roughness:0.92, metalness:0.02, color:0xc8c0a0
@@ -685,65 +632,53 @@ const matCeil = new THREE.MeshStandardMaterial({ color:0x1a1610, roughness:0.95 
 const matConcrete = new THREE.MeshStandardMaterial({
   map:texConcrete, normalMap:texConcreteN, roughness:0.92, metalness:0.04, color:0x9a9088
 });
-const matDark = new THREE.MeshStandardMaterial({ color:0x0c0a08, roughness:0.9 });
-
-// LAYOUT:
-//   Main room: -2..2 (X), -3..3 (Z). Tatami. Contains table, phone, door, window.
-//   Shoji at Z=-3 leads to back room.
-//   Back room: -2..2 (X), -7..-3 (Z). Smaller, darker, closet on far wall.
-//   Balcony: through window at Z=+3 (sliding door). Small exterior.
-//   Front door: at X=-2 (west wall), leading to hallway (never seen — just frosted glass).
 
 const H = 2.7;
 
-// --- MAIN ROOM WALLS ---
-wall(0,-3.05,4.2,H,0.2,matWall);       // north (with shoji gap later — we'll leave a gap)
-// Actually let's leave the north wall solid but put shoji in front of it — the shoji slides open, revealing a "closet-like" back space we build as a separate room.
-// Simpler: make the north wall a wall with a large doorway, then place shoji in the doorway.
-// We'll redo north wall as two segments.
-
-// Redo: remove the full north wall, build segments
-world.remove(world.children[world.children.length-1]);
-colliders.pop();
-
-// North wall segments (gap for shoji doorway)
-wall(-1.4,-3.05,1.4,H,0.2,matWall); // left of doorway
-wall( 1.4,-3.05,1.4,H,0.2,matWall); // right
-wall(0,-3.05,4.2,0.4,0.2,matWall);  // header above doorway (0.4 tall at top)
-// That last one collides the whole width — need to adjust. Let's just make header non-colliding visually.
-colliders.pop();
-const headerNorth = new THREE.Mesh(new THREE.BoxGeometry(4.2,0.4,0.2), matWall);
-headerNorth.position.set(0, H-0.2, -3.05);
-world.add(headerNorth);
-
-wall(0, 3.05,4.2,H,0.2,matWall);       // south
-wall(-2.05,0,0.2,H,6.2,matWall);       // west (with front door gap later)
-wall( 2.05,0,0.2,H,6.2,matWall);       // east
-
-// Floors
+/* ============================ MAIN ROOM ============================ */
+// North wall with shoji doorway gap
+wall(-1.4,-3.05,1.4,H,0.2,matWall);
+wall( 1.4,-3.05,1.4,H,0.2,matWall);
 {
-  const f = new THREE.Mesh(new THREE.PlaneGeometry(4,6), matFloorMain);
-  f.rotation.x = -Math.PI/2; f.position.y = 0.001; f.receiveShadow = true;
-  world.add(f);
-  // 6 tatami mats pattern — border lines
-  // (skip, texture handles it)
-  const c = new THREE.Mesh(new THREE.PlaneGeometry(4,6), matCeil);
-  c.rotation.x = Math.PI/2; c.position.y = H; c.receiveShadow = true;
-  world.add(c);
+  const header = new THREE.Mesh(new THREE.BoxGeometry(4.2,0.4,0.2), matWall);
+  header.position.set(0, H-0.2, -3.05);
+  header.receiveShadow = true;
+  world.add(header);
 }
 
-// --- BACK ROOM (behind shoji, north) ---
+// West wall with front door gap — two segments + header (no collider on the header)
+wall(-2.05, 1.4, 0.2, H, 2.2, matWall);   // south segment
+wall(-2.05,-1.4, 0.2, H, 2.2, matWall);   // north segment
 {
-  // floor
-  const f = new THREE.Mesh(new THREE.PlaneGeometry(4,4), matFloorBack);
-  f.rotation.x = -Math.PI/2; f.position.set(0,0.001,-5); f.receiveShadow=true; world.add(f);
-  const c = new THREE.Mesh(new THREE.PlaneGeometry(4,4), matCeil);
-  c.rotation.x = Math.PI/2; c.position.set(0,H,-5); c.receiveShadow=true; world.add(c);
-  // walls
-  wall(0,-7.05,4.2,H,0.2,matWall);       // north (closet wall)
-  wall(-2.05,-5,0.2,H,4.2,matWall);      // west
-  wall( 2.05,-5,0.2,H,4.2,matWall);      // east
-  // side walls of doorway area
+  const headerW = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.6, 1.6), matWall);
+  headerW.position.set(-2.05, H-0.3, 0);
+  headerW.receiveShadow = true;
+  world.add(headerW);
+}
+
+// East wall (solid)
+wall(2.05,0,0.2,H,6.2,matWall);
+
+// South wall with balcony sliding door gap — two segments + header + sill
+wall(-1.6, 3.05, 1.0, H, 0.2, matWall);
+wall( 1.6, 3.05, 1.0, H, 0.2, matWall);
+{
+  const headerS = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.4, 0.2), matWall);
+  headerS.position.set(0, H-0.2, 3.05);
+  headerS.receiveShadow = true;
+  world.add(headerS);
+  const sillS = new THREE.Mesh(new THREE.BoxGeometry(2.2, 0.1, 0.2), matWall);
+  sillS.position.set(0, 0.05, 3.05);
+  sillS.receiveShadow = true;
+  world.add(sillS);
+}
+
+// Main room floor + ceiling
+{
+  const f = new THREE.Mesh(new THREE.PlaneGeometry(4,6), matFloorMain);
+  f.rotation.x = -Math.PI/2; f.position.y = 0.001; f.receiveShadow = true; world.add(f);
+  const c = new THREE.Mesh(new THREE.PlaneGeometry(4,6), matCeil);
+  c.rotation.x = Math.PI/2; c.position.y = H; c.receiveShadow = true; world.add(c);
 }
 
 // Baseboards main
@@ -754,29 +689,34 @@ wall( 2.05,0,0.2,H,6.2,matWall);       // east
   const b4 = b3.clone(); b4.position.x = 2.0; world.add(b4);
 }
 
-/* ============================ SHOJI SCREEN (back room divider) ============================ */
-// Two sliding panels in the north doorway of main room. They slide apart when opened.
+/* ============================ BACK ROOM ============================ */
+{
+  const f = new THREE.Mesh(new THREE.PlaneGeometry(4,4), matFloorBack);
+  f.rotation.x = -Math.PI/2; f.position.set(0,0.001,-5); f.receiveShadow=true; world.add(f);
+  const c = new THREE.Mesh(new THREE.PlaneGeometry(4,4), matCeil);
+  c.rotation.x = Math.PI/2; c.position.set(0,H,-5); c.receiveShadow=true; world.add(c);
+  wall(0,-7.05,4.2,H,0.2,matWall);   // north closet wall
+  wall(-2.05,-5,0.2,H,4.2,matWall);  // west
+  wall( 2.05,-5,0.2,H,4.2,matWall);  // east
+}
+
+/* ============================ SHOJI SCREEN ============================ */
 const shojiGroup = new THREE.Group();
 const shojiLeft = new THREE.Group();
 const shojiRight = new THREE.Group();
 {
   const panelW = 1.95, panelH = 2.3;
-  // wooden frame
   const frameMat = new THREE.MeshStandardMaterial({
     map:texWood, normalMap:texWoodN, roughness:0.55, metalness:0.1, color:0x6a4a30
   });
   function buildPanel(){
     const g = new THREE.Group();
-    // paper
     const paper = new THREE.Mesh(new THREE.PlaneGeometry(panelW-0.06, panelH-0.06), matShoji);
-    paper.position.set(0,0,0);
     g.add(paper);
-    // frame edges
     const top = new THREE.Mesh(new THREE.BoxGeometry(panelW,0.05,0.04), frameMat); top.position.set(0,panelH/2,0.02); g.add(top);
     const bot = top.clone(); bot.position.y = -panelH/2; g.add(bot);
     const lf = new THREE.Mesh(new THREE.BoxGeometry(0.05,panelH,0.04), frameMat); lf.position.set(-panelW/2,0,0.02); g.add(lf);
     const rt = lf.clone(); rt.position.x = panelW/2; g.add(rt);
-    // cross grid — thin strips
     for(let i=1;i<4;i++){
       const v = new THREE.Mesh(new THREE.BoxGeometry(0.02,panelH,0.03), frameMat);
       v.position.set(-panelW/2 + (panelW/4)*i, 0, 0.025); g.add(v);
@@ -798,13 +738,16 @@ const shojiRight = new THREE.Group();
 
 function openShoji(){
   state.shojiOpen = true;
-  // animate via GSAP-less tween in main loop
   const t0 = performance.now();
+  const startL = shojiLeft.position.x;
+  const startR = shojiRight.position.x;
+  const endL = startL - 1.8;
+  const endR = startR + 1.8;
   function step(){
     const p = Math.min(1, (performance.now()-t0)/1200);
     const e = 1 - Math.pow(1-p, 3);
-    shojiLeft.position.x = -1.95/2 + 0.02 - 1.9*e;
-    shojiRight.position.x = 1.95/2 - 0.02 + 1.9*e;
+    shojiLeft.position.x = lerp(startL, endL, e);
+    shojiRight.position.x = lerp(startR, endR, e);
     if(p<1) requestAnimationFrame(step);
   }
   step();
@@ -813,19 +756,22 @@ function openShoji(){
 function closeShoji(){
   state.shojiOpen = false;
   const t0 = performance.now();
+  const startL = shojiLeft.position.x;
+  const startR = shojiRight.position.x;
+  const endL = -1.95/2 + 0.02;
+  const endR = 1.95/2 - 0.02;
   function step(){
     const p = Math.min(1, (performance.now()-t0)/1000);
     const e = 1 - Math.pow(1-p, 3);
-    shojiLeft.position.x = -1.95 - 1.9*(1-e);
-    shojiRight.position.x = 1.95 + 1.9*(1-e);
+    shojiLeft.position.x = lerp(startL, endL, e);
+    shojiRight.position.x = lerp(startR, endR, e);
     if(p<1) requestAnimationFrame(step);
   }
   step();
   audio.thud();
 }
 
-/* ============================ CLOSET (back room, far wall) ============================ */
-const closetGroup = new THREE.Group();
+/* ============================ CLOSET ============================ */
 const closetDoorL = new THREE.Group();
 const closetDoorR = new THREE.Group();
 {
@@ -836,34 +782,25 @@ const closetDoorR = new THREE.Group();
   const doorMat = new THREE.MeshStandardMaterial({
     map:texWood, normalMap:texWoodN, roughness:0.55, metalness:0.1, color:0x4a3420
   });
-  // recessed opening — dark void
   const voidMesh = new THREE.Mesh(new THREE.PlaneGeometry(cw-0.1, ch-0.1), new THREE.MeshStandardMaterial({ color:0x000000, roughness:1 }));
   voidMesh.position.set(0, ch/2, -7.04); world.add(voidMesh);
-  // frame posts
-  const fL = new THREE.Mesh(new THREE.BoxGeometry(0.08,ch,0.1), frameMat); fL.position.set(-cw/2,ch/2,-7.05);
-  const fR = fL.clone(); fR.position.x = cw/2;
-  const fT = new THREE.Mesh(new THREE.BoxGeometry(cw+0.16,0.1,0.1), frameMat); fT.position.set(0,ch,-7.05);
-  const fB = new THREE.Mesh(new THREE.BoxGeometry(cw+0.16,0.08,0.1), frameMat); fB.position.set(0,0.04,-7.05);
-  world.add(fL,fR,fT,fB);
-  // doors (sliding)
+  const fL = new THREE.Mesh(new THREE.BoxGeometry(0.08,ch,0.1), frameMat); fL.position.set(-cw/2,ch/2,-7.05); world.add(fL);
+  const fR = fL.clone(); fR.position.x = cw/2; world.add(fR);
+  const fT = new THREE.Mesh(new THREE.BoxGeometry(cw+0.16,0.1,0.1), frameMat); fT.position.set(0,ch,-7.05); world.add(fT);
+  const fB = new THREE.Mesh(new THREE.BoxGeometry(cw+0.16,0.08,0.1), frameMat); fB.position.set(0,0.04,-7.05); world.add(fB);
   function makeClosetDoor(){
     const g = new THREE.Group();
     const d = new THREE.Mesh(new THREE.BoxGeometry(cw/2 - 0.02, ch - 0.12, 0.05), doorMat);
-    d.position.set(0,0,0); g.add(d);
-    // handle
+    g.add(d);
     const h = new THREE.Mesh(new THREE.SphereGeometry(0.035,12,10), new THREE.MeshStandardMaterial({ color:0xc8a868, metalness:1.0, roughness:0.2 }));
     h.position.set(cw/4 - 0.15, 0, 0.04); g.add(h);
     return g;
   }
   closetDoorL.add(makeClosetDoor());
   closetDoorR.add(makeClosetDoor());
-  closetDoorR.children[0].children[0].rotation.y = Math.PI; // mirror
   closetDoorL.position.set(-cw/4, ch/2, -7.02);
   closetDoorR.position.set( cw/4, ch/2, -7.0);
-  closetGroup.add(closetDoorL, closetDoorR);
-  closetGroup.traverse(o=>{ if(o.isMesh) o.castShadow=true; });
-  world.add(closetGroup);
-  // dark inner — a *very* deep box so when opened, it reads as wrong
+  world.add(closetDoorL, closetDoorR);
   const inner = new THREE.Mesh(
     new THREE.BoxGeometry(cw-0.2, ch-0.2, 3.0),
     new THREE.MeshStandardMaterial({ color:0x000000, roughness:1, side:THREE.BackSide })
@@ -875,14 +812,17 @@ const closetDoorR = new THREE.Group();
 function openCloset(){
   state.closetOpen = true;
   const t0 = performance.now();
+  const startL = closetDoorL.position.x;
+  const startR = closetDoorR.position.x;
+  const endL = startL - 0.82;
+  const endR = startR + 0.82;
   function step(){
     const p = Math.min(1, (performance.now()-t0)/1400);
     const e = 1 - Math.pow(1-p, 3);
-    closetDoorL.position.x = -0.45 - 0.82*e;
-    closetDoorR.position.x =  0.45 + 0.82*e;
+    closetDoorL.position.x = lerp(startL, endL, e);
+    closetDoorR.position.x = lerp(startR, endR, e);
     if(p<1) requestAnimationFrame(step);
     else {
-      // auto-close after a beat
       setTimeout(()=>{
         if(state.closetOpen) closeClosetQuiet();
       }, 2600);
@@ -893,67 +833,23 @@ function openCloset(){
 }
 function closeClosetQuiet(){
   const t0 = performance.now();
+  const startL = closetDoorL.position.x;
+  const startR = closetDoorR.position.x;
+  const endL = -0.45;
+  const endR = 0.45;
   function step(){
     const p = Math.min(1, (performance.now()-t0)/1600);
     const e = 1 - Math.pow(1-p, 3);
-    closetDoorL.position.x = -0.45 - 0.82*(1-e);
-    closetDoorR.position.x =  0.45 + 0.82*(1-e);
+    closetDoorL.position.x = lerp(startL, endL, e);
+    closetDoorR.position.x = lerp(startR, endR, e);
     if(p<1) requestAnimationFrame(step);
     else state.closetOpen = false;
   }
   step();
 }
-function closeCloset(){
-  state.closetOpen = false;
-  const t0 = performance.now();
-  function step(){
-    const p = Math.min(1, (performance.now()-t0)/1200);
-    const e = 1 - Math.pow(1-p, 3);
-    closetDoorL.position.x = -0.45 - 0.82*(1-e);
-    closetDoorR.position.x =  0.45 + 0.82*(1-e);
-    if(p<1) requestAnimationFrame(step);
-  }
-  step();
-}
 
-/* ============================ FRONT DOOR (frosted glass, backlit silhouette) ============================ */
-// West wall, gap. We'll cut the west wall into segments and place a door.
-// Replace west wall
-world.remove(world.children.filter(o=>o.isMesh && o.geometry && o.geometry.parameters && o.geometry.parameters.width === 0.2 && o.geometry.parameters.height === H && o.geometry.parameters.depth === 6.2)[0]);
-// Reset colliders more simply: rebuild west wall as segments
-colliders.length = 0;
-// Rebuild all colliders cleanly
-addAABB(0,-3.05,4.2,0.2);
-addAABB(-1.4,-3.05,1.4,0.2); // left seg
-addAABB( 1.4,-3.05,1.4,0.2); // right seg
-addAABB(0, 3.05,4.2,0.2);
-addAABB(-2.05,1.4,0.2,2.2);  // west, upper segment (south of door)
-addAABB(-2.05,-1.4,0.2,2.2); // west, lower segment (north of door)
-addAABB( 2.05,0,0.2,6.2);
-addAABB(0,-7.05,4.2,0.2);
-addAABB(-2.05,-5,0.2,4.2);
-addAABB( 2.05,-5,0.2,4.2);
-
-// Now rebuild visible west wall as segments
+/* ============================ FRONT DOOR ============================ */
 {
-  // remove old west wall
-  const old = world.children.filter(o=>o.isMesh && o.geometry && o.geometry.parameters && o.geometry.parameters.depth === 6.2);
-  old.forEach(o=>world.remove(o));
-  // south segment
-  const wS = new THREE.Mesh(new THREE.BoxGeometry(0.2,H,2.2), matWall);
-  wS.position.set(-2.05,H/2,1.4); wS.receiveShadow = true; world.add(wS);
-  // north segment
-  const wN = new THREE.Mesh(new THREE.BoxGeometry(0.2,H,2.2), matWall);
-  wN.position.set(-2.05,H/2,-1.4); wN.receiveShadow = true; world.add(wN);
-  // header above door
-  const wH = new THREE.Mesh(new THREE.BoxGeometry(0.2,0.6,1.6), matWall);
-  wH.position.set(-2.05,H-0.3,0); world.add(wH);
-}
-
-// The door itself — frosted glass panel in a wooden frame
-const frontDoorGroup = new THREE.Group();
-{
-  // frame
   const fm = new THREE.MeshStandardMaterial({
     map:texWood, normalMap:texWoodN, roughness:0.55, metalness:0.1, color:0x6a4a30
   });
@@ -962,7 +858,6 @@ const frontDoorGroup = new THREE.Group();
   const lf = new THREE.Mesh(new THREE.BoxGeometry(0.1,H-0.25,0.08), fm); lf.position.set(-2.02,(H-0.15)/2,-0.76); world.add(lf);
   const rt = lf.clone(); rt.position.z = 0.76; world.add(rt);
 
-  // frosted glass — semi-transparent, so the hallway light behind bleeds through
   const glassMat = new THREE.MeshPhysicalMaterial({
     map:texFrosted, color:0x8890a0, transparent:true, opacity:0.55,
     roughness:0.4, metalness:0.0, transmission:0.5, thickness:0.3,
@@ -973,12 +868,11 @@ const frontDoorGroup = new THREE.Group();
   glass.position.set(-2.0, H/2, 0);
   world.add(glass);
 
-  // door handle
   const handleMat = new THREE.MeshStandardMaterial({ color:0xc8a868, metalness:1.0, roughness:0.2 });
   const handle = new THREE.Mesh(new THREE.SphereGeometry(0.05,16,12), handleMat);
   handle.position.set(-1.94, 1.05, -0.55); world.add(handle);
 
-  // "405" plaque on the door
+  // 405 plaque
   const plaqueCanvas = document.createElement('canvas'); plaqueCanvas.width=256; plaqueCanvas.height=128;
   const pctx = plaqueCanvas.getContext('2d');
   pctx.fillStyle='#1a1410'; pctx.fillRect(0,0,256,128);
@@ -993,7 +887,7 @@ const frontDoorGroup = new THREE.Group();
   plaque.position.set(-1.97, 1.55, 0);
   world.add(plaque);
 
-  // "事故物件" warning sticker (small, ominous)
+  // 事故物件 sticker
   const stickerCanvas = document.createElement('canvas'); stickerCanvas.width=128; stickerCanvas.height=64;
   const sctx = stickerCanvas.getContext('2d');
   sctx.fillStyle='#c8a020'; sctx.fillRect(0,0,128,64);
@@ -1008,57 +902,38 @@ const frontDoorGroup = new THREE.Group();
   world.add(sticker);
 }
 
-// Hallway light behind the door — cold, dim, always there
+// Hallway light behind the door
 const hallLight = new THREE.PointLight(0x8aa0c8, 6, 6, 2);
 hallLight.position.set(-2.8, 1.8, 0);
 scene.add(hallLight);
 
-// Silhouette figures behind the frosted glass (hidden initially)
+/* ============================ SILHOUETTES ============================ */
 const silhouetteGroup = new THREE.Group();
 function makeSilhouette(x,z,scale=1){
   const g = new THREE.Group();
   const mat = new THREE.MeshBasicMaterial({ color:0x0a0806, transparent:true, opacity:0.9 });
-  // body
   const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.22*scale, 0.95*scale, 4, 10), mat);
   body.position.y = 0.95*scale;
-  // head
   const head = new THREE.Mesh(new THREE.SphereGeometry(0.17*scale, 12, 10), mat);
   head.position.y = 1.6*scale;
-  // legs suggestion
   const legs = new THREE.Mesh(new THREE.CylinderGeometry(0.15*scale, 0.18*scale, 0.7*scale, 8), mat);
   legs.position.y = 0.35*scale;
   g.add(body, head, legs);
   g.position.set(x, 0, z);
   return g;
 }
-// One silhouette waiting, positioned in the hallway (world X < -2.1)
 const sil1 = makeSilhouette(-2.55, 0, 1.0);
 sil1.visible = false;
 scene.add(sil1);
-// second silhouette for the final beat
 const sil2 = makeSilhouette(-2.85, 0.35, 0.98);
 sil2.visible = false;
 scene.add(sil2);
 
-/* ============================ BALCONY / WINDOW (sliding glass door, south wall) ============================ */
-// South wall — we need an opening for the balcony sliding door. Redo south wall as segments.
-{
-  // remove old south wall
-  const old = world.children.filter(o=>o.isMesh && o.geometry && o.geometry.parameters && o.geometry.parameters.width === 4.2 && o.position.z === 3.05);
-  old.forEach(o=>world.remove(o));
-  // segments
-  const sL = new THREE.Mesh(new THREE.BoxGeometry(1.0,H,0.2), matWall); sL.position.set(-1.6,H/2,3.05); sL.receiveShadow=true; world.add(sL);
-  const sR = new THREE.Mesh(new THREE.BoxGeometry(1.0,H,0.2), matWall); sR.position.set( 1.6,H/2,3.05); sR.receiveShadow=true; world.add(sR);
-  const sT = new THREE.Mesh(new THREE.BoxGeometry(2.2,0.4,0.2), matWall); sT.position.set(0,H-0.2,3.05); world.add(sT);
-  const sB = new THREE.Mesh(new THREE.BoxGeometry(2.2,0.1,0.2), matWall); sB.position.set(0,0.05,3.05); world.add(sB);
-}
-
-// Window / sliding glass door frame
+/* ============================ BALCONY / WINDOW ============================ */
 {
   const fm = new THREE.MeshStandardMaterial({
     map:texWood, normalMap:texWoodN, roughness:0.5, metalness:0.15, color:0x5a3f28
   });
-  // frame
   const fT = new THREE.Mesh(new THREE.BoxGeometry(2.0,0.08,0.1), fm); fT.position.set(0,2.3,3.0); world.add(fT);
   const fB = new THREE.Mesh(new THREE.BoxGeometry(2.0,0.08,0.1), fm); fB.position.set(0,0.1,3.0); world.add(fB);
   const fL = new THREE.Mesh(new THREE.BoxGeometry(0.08,2.2,0.1), fm); fL.position.set(-1.0,1.2,3.0); world.add(fL);
@@ -1070,7 +945,6 @@ scene.add(sil2);
 {
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(2.4,1.2), matConcrete);
   floor.rotation.x = -Math.PI/2; floor.position.set(0,0,3.6); floor.receiveShadow = true; world.add(floor);
-  // rail
   const railMat = new THREE.MeshStandardMaterial({ color:0x3a3630, roughness:0.5, metalness:0.5 });
   const railTop = new THREE.Mesh(new THREE.BoxGeometry(2.4,0.05,0.05), railMat); railTop.position.set(0,1.1,4.2); world.add(railTop);
   const railBot = railTop.clone(); railBot.position.y = 0.2; world.add(railBot);
@@ -1078,17 +952,14 @@ scene.add(sil2);
     const v = new THREE.Mesh(new THREE.BoxGeometry(0.03,1.0,0.03), railMat);
     v.position.set(-1.1 + i*0.3, 0.65, 4.2); world.add(v);
   }
-  // back wall (outside building)
   const backWall = new THREE.Mesh(new THREE.PlaneGeometry(2.4,2.2), matConcrete);
   backWall.position.set(0,1.1,4.3); backWall.rotation.y = Math.PI; world.add(backWall);
-  // side walls
   const swL = new THREE.Mesh(new THREE.PlaneGeometry(1.2,2.2), matConcrete);
   swL.rotation.y = Math.PI/2; swL.position.set(-1.2,1.1,3.6); world.add(swL);
   const swR = swL.clone(); swR.rotation.y = -Math.PI/2; swR.position.x = 1.2; world.add(swR);
 }
 
-// Balcony window glass — the STAR. Rain rivulets, cold night, distant city.
-// Uses a proper shader with multi-layer rain, refractive highlights, and city backdrop behind.
+// Balcony glass — rain rivulets shader
 {
   const glassGeo = new THREE.PlaneGeometry(2.0,2.2);
   const glassMat = new THREE.ShaderMaterial({
@@ -1104,24 +975,15 @@ scene.add(sil2);
       varying vec2 vUv;
       uniform float uTime; uniform float uRain; uniform vec3 uNight; uniform vec3 uWarm;
       float hash(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
-
       void main(){
         vec2 uv = vUv;
-
-        // BASE — deep night sky, gradient
         vec3 base = mix(uNight*0.7, uNight*1.3, vUv.y);
-        // warm interior light spill (from room, bottom of glass)
         base += uWarm * smoothstep(0.55, 0.0, vUv.y) * 0.7;
-        // a few distant window lights — fixed, but alive
         vec2 cityGrid = floor(uv * vec2(40.0, 25.0));
         float ch = hash(cityGrid);
         float cityLight = step(0.93, ch) * 0.7;
-        // make some cities glow slowly
         cityLight *= 0.6 + 0.4*sin(uTime*0.5 + ch*6.28);
         base += vec3(1.0, 0.72, 0.4) * cityLight * 0.6;
-
-        // RAIN — multi-layer. Each layer is a grid of drops that slide.
-        // LAYER 1: far, small, slow drops (beads)
         float r1 = 0.0;
         for(int i=0;i<3;i++){
           float fi = float(i);
@@ -1132,52 +994,34 @@ scene.add(sil2);
           vec2 c = vec2(0.5 + 0.25*sin(h*20.0 + uTime*0.2), 0.5 + 0.25*cos(h*18.0 + uTime*0.16));
           float d = length(f-c);
           float drop = smoothstep(0.30, 0.06, d) * h;
-          // vertical slide per drop
           float slide = fract(uv.y*2.0 + uTime*0.018*(0.5+h) + h*7.0);
           drop *= smoothstep(0.5, 0.0, abs(slide-0.5));
           drop *= step(0.5, h);
           r1 = max(r1, drop);
         }
-        // LAYER 2: closer, larger rivulets — these are the ones that *slide* visibly
         float r2 = 0.0;
         for(int i=0;i<5;i++){
           float fi = float(i);
-          // vertical column-based rivulets
           float col = floor(uv.x * (12.0 + fi*3.0) + fi*13.7);
           float colH = hash(vec2(col, fi*5.3));
           float speed = 0.04 + colH*0.08;
-          // y position of the rivulet head
-          float head = fract(uTime*speed + colH*10.0);
-          // the trail
           float dy = fract(uv.y*1.2 + uTime*speed*1.0 + colH*3.0);
           float trail = smoothstep(0.0, 0.6, dy) * smoothstep(1.0, 0.85, dy);
-          // width of drop
           float wx = abs(fract(uv.x * (12.0 + fi*3.0)) - 0.5);
           float width = smoothstep(0.5, 0.0, wx);
-          // head is a brighter bead
           float headY = fract(uv.y*1.2 + uTime*speed*1.0 + colH*3.0);
           float headDot = smoothstep(0.06, 0.0, abs(headY - 0.05)) * width;
           r2 = max(r2, width * trail * 0.6 + headDot*0.8);
         }
-
-        // combine rain layers
         float rainTotal = r1*0.7 + r2*1.0;
         rainTotal *= uRain;
-
-        // RAIN VISUAL: drops are BRIGHTER (catch the light) with dark centers
         vec3 rainBright = vec3(0.6, 0.72, 0.9);
         vec3 rainDark = base * 0.3;
-        // give drops a bright rim, dark center — refraction illusion
         vec3 dropColor = mix(rainDark, rainBright, smoothstep(0.0, 0.6, rainTotal) * 0.7);
         vec3 col = mix(base, dropColor, smoothstep(0.05, 0.9, rainTotal));
-
-        // wet sheen on the glass itself
         col += vec3(0.05, 0.08, 0.12) * 0.4;
-
-        // subtle grain
         float gn = (hash(uv*1024.0 + uTime) - 0.5) * 0.04;
         col += gn;
-
         gl_FragColor = vec4(col, 0.94);
       }
     `
@@ -1188,19 +1032,17 @@ scene.add(sil2);
   world.add(glass);
   window.__balconyGlass = glassMat;
 
-  // outside light — cold, dim, rainlit
   const outLight = new THREE.PointLight(0x6a88b8, 4, 8, 2);
   outLight.position.set(0, 1.5, 5.5);
   scene.add(outLight);
 
-  // far city — distant buildings
+  // distant city
   const cityCanvas = document.createElement('canvas');
   cityCanvas.width = 1024; cityCanvas.height = 512;
   const cctx = cityCanvas.getContext('2d');
   const sky = cctx.createLinearGradient(0,0,0,512);
   sky.addColorStop(0,'#06080e'); sky.addColorStop(0.6,'#0a0e18'); sky.addColorStop(1,'#1a1410');
   cctx.fillStyle = sky; cctx.fillRect(0,0,1024,512);
-  // buildings
   for(let i=0;i<80;i++){
     const bx = Math.random()*1024;
     const bw = 20+Math.random()*60;
@@ -1225,9 +1067,8 @@ scene.add(sil2);
   world.add(cityMesh);
 }
 
-/* ============================ FURNITURE (main room) ============================ */
-// Low table (chabudai)
-const tableGroup = new THREE.Group();
+/* ============================ FURNITURE ============================ */
+// Low table
 {
   const tm = new THREE.MeshStandardMaterial({ map:texWood, normalMap:texWoodN, roughness:0.35, metalness:0.2, color:0x5a3f28, envMapIntensity:0.9 });
   const top = new THREE.Mesh(new THREE.BoxGeometry(1.2,0.06,0.8), tm);
@@ -1239,14 +1080,13 @@ const tableGroup = new THREE.Group();
   addAABB(0,-0.6,1.2,0.8);
 }
 
-// Landlord's note on the table (Note 1)
+// Landlord note (Note 1) — paper on the table
 const noteLandlordGroup = new THREE.Group();
 {
   const paperMat = new THREE.MeshStandardMaterial({ color:0xe8dcc0, roughness:0.9, side:THREE.DoubleSide });
   const paper = new THREE.Mesh(new THREE.PlaneGeometry(0.22,0.3), paperMat);
   paper.rotation.x = -Math.PI/2;
   paper.position.set(-0.2,0.4,-0.55); noteLandlordGroup.add(paper);
-  // a small pencil line
   const lineMat = new THREE.MeshBasicMaterial({ color:0x3a2a1a });
   for(let i=0;i<6;i++){
     const line = new THREE.Mesh(new THREE.PlaneGeometry(0.14,0.006), lineMat);
@@ -1257,7 +1097,7 @@ const noteLandlordGroup = new THREE.Group();
   world.add(noteLandlordGroup);
 }
 
-// Landline phone on a small shelf
+// Landline phone
 const phoneGroup = new THREE.Group();
 {
   const pm = new THREE.MeshStandardMaterial({ color:0x1a1410, roughness:0.4, metalness:0.3 });
@@ -1270,50 +1110,39 @@ const phoneGroup = new THREE.Group();
   phoneGroup.add(body, handset, dial);
   phoneGroup.position.set(1.4,0.7,-0.6);
   world.add(phoneGroup);
-  // small shelf under it
   const shelf = new THREE.Mesh(new THREE.BoxGeometry(0.4,0.05,0.35), new THREE.MeshStandardMaterial({ map:texWood, roughness:0.7, color:0x4a3520 }));
   shelf.position.set(1.4,0.65,-0.6); shelf.castShadow = shelf.receiveShadow = true; world.add(shelf);
-  // phone light for readability
   const pl = new THREE.PointLight(0xffb46b, 0.6, 1.5, 2);
   pl.position.set(1.2,1.0,-0.6); scene.add(pl);
 }
 
-// Butsudan shrine alcove (east wall, recessed)
-const shrineGroup = new THREE.Group();
+// Shrine alcove
 const shrineLampMesh = new THREE.Mesh();
 let shrineLampLight = null;
 {
-  // recessed niche — create a dark box
   const niche = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.9, 0.8), new THREE.MeshStandardMaterial({ color:0x0a0806, roughness:1 }));
   niche.position.set(2.0, 1.4, -2.0); world.add(niche);
-  // shelf
   const shelfMat = new THREE.MeshStandardMaterial({ map:texWood, normalMap:texWoodN, roughness:0.5, metalness:0.15, color:0x5a3a20 });
   const shelf = new THREE.Mesh(new THREE.BoxGeometry(0.05,0.05,0.8), shelfMat);
   shelf.position.set(2.0, 1.0, -2.0); world.add(shelf);
-  // small shrine tablet (memorial tablet, ihai)
   const tabletMat = new THREE.MeshStandardMaterial({ map:texWood, roughness:0.4, color:0x1a0a06 });
   const tablet = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.22, 0.06), tabletMat);
   tablet.position.set(2.0, 1.13, -2.0); world.add(tablet);
-  // gold trim
   const gold = new THREE.MeshStandardMaterial({ color:0xd8b878, metalness:0.9, roughness:0.3 });
   const goldTop = new THREE.Mesh(new THREE.BoxGeometry(0.022, 0.02, 0.07), gold);
   goldTop.position.set(2.0, 1.24, -2.0); world.add(goldTop);
-  // small cup (offering)
   const cupMat = new THREE.MeshStandardMaterial({ color:0xe8dcc0, roughness:0.7 });
   const cup = new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.025,0.04,12), cupMat);
   cup.position.set(2.0, 1.04, -2.15); world.add(cup);
-  // small amber lamp (electric, glowing)
   const lampBody = new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,0.08,12), new THREE.MeshStandardMaterial({ color:0xffb46b, roughness:0.4, emissive:0xffb46b, emissiveIntensity:1.5 }));
   lampBody.position.set(2.0, 1.06, -1.85); world.add(lampBody);
   shrineLampMesh.copy(lampBody); shrineLampMesh.visible = false;
-  // actual light source
   shrineLampLight = new THREE.PointLight(0xffa060, 3, 1.8, 2);
   shrineLampLight.position.set(1.85, 1.1, -1.85);
   scene.add(shrineLampLight);
 }
 
 /* ============================ LIGHTING ============================ */
-// Ceiling fluorescent light — the main light, in the center of main room
 const ceilLight = new THREE.PointLight(0xfff0d0, 22, 10, 1.6);
 ceilLight.position.set(0, 2.5, 0);
 ceilLight.castShadow = true;
@@ -1321,21 +1150,17 @@ ceilLight.shadow.mapSize.set(1024,1024);
 ceilLight.shadow.bias = -0.0015;
 scene.add(ceilLight);
 
-// visible fixture
 {
   const fix = new THREE.Mesh(new THREE.BoxGeometry(0.9,0.06,0.3), new THREE.MeshStandardMaterial({ color:0x1a1410, roughness:0.6, metalness:0.3, emissive:0xfff0d0, emissiveIntensity:1.2 }));
   fix.position.set(0, H-0.04, 0); world.add(fix);
 }
 
-// Back room — dim, single bare bulb
 const backLight = new THREE.PointLight(0xffa050, 0.8, 5, 2);
 backLight.position.set(0, 2.4, -5);
 scene.add(backLight);
 
-// Ambient fill — very low, warm-ish
 scene.add(new THREE.HemisphereLight(0x2a2420, 0x100808, 0.4));
 
-// Balcony light — cold blue
 const balconyFill = new THREE.DirectionalLight(0x7a95c8, 0.4);
 balconyFill.position.set(0, 3, 6);
 balconyFill.target.position.set(0, 1, 0);
@@ -1347,17 +1172,17 @@ function addInteract(pos, radius, label, action, once=true){
   interactables.push({pos:pos.clone(), radius, label, action, once, used:false});
 }
 
-// Note 1 — Landlord's note
+// Note 1
 addInteract(new THREE.Vector3(-0.2,0.42,-0.55), 0.7, "Read the landlord's note", ()=>{
-  if(state.notesFound.landlord){ showNote("Landlord's note", "Welcome to 405.\n\nThe rent is low because the last tenant left in a hurry. Please do not open the closet in the back room. There is nothing in it worth seeing.\n\nThe other tenants keep to themselves. If the doorbell rings after midnight, do not answer it. They know not to visit.\n\n— Manager"); return; }
+  if(state.notesFound.landlord){ showSub("You've already read it. The handwriting has not changed."); return; }
   state.notesFound.landlord = true;
-  showNote("Landlord's note", "Welcome to 405.\n\nThe rent is low because the last tenant left in a hurry. Please do not open the closet in the back room. There is nothing in it worth seeing.\n\nThe other tenants keep to themselves. If the doorbell rings after midnight, do not answer it. They know not to visit.\n\n— Manager");
+  showNote("Landlord's note", "");
   audio.bellChime();
   noteFlash("Note added to your notebook");
   renderNotes();
 });
 
-// Front door
+// Front door look
 addInteract(new THREE.Vector3(-1.9, 1.2, 0), 0.9, "Look through the frosted door", ()=>{
   showSub("Frosted glass. The hallway light is on. You can't see who is outside.");
 });
@@ -1368,7 +1193,6 @@ addInteract(new THREE.Vector3(1.4, 0.8, -0.6), 0.8, "Answer the phone", ()=>{
     showSub("The phone is silent. You pick it up. Nothing. You put it back.");
     return;
   }
-  // Answering the ringing phone
   state.phoneRinging = false;
   state.decisions.phone = "answered";
   audio.phoneVoice();
@@ -1387,32 +1211,27 @@ addInteract(new THREE.Vector3(0, 1.2, -3.0), 1.2, "Slide the shoji open", ()=>{
   }
 });
 
-// Closet (back room)
+// Closet
 addInteract(new THREE.Vector3(0, 1.2, -6.9), 1.0, "Open the closet", ()=>{
   if(!state.closetOpen){
     openCloset();
     showSub("The closet opens. It is empty. It is deeper than the wall should allow.");
     state.closetTouched = true;
-    if(!state.beats.closetOpened){
-      state.beats.closetOpened = true;
-      setTimeout(()=>{ showSub("You close it. You feel colder than before."); }, 2800);
-    }
+    setTimeout(()=>{ showSub("You close it. You feel colder than before."); }, 2800);
   }
 });
 
-// Balcony window
+// Balcony
 addInteract(new THREE.Vector3(0, 1.2, 3.0), 1.0, "Look out at the rain", ()=>{
   showSub("Rain on the window. The city is quiet. It has not stopped, and it will not stop until dawn.");
 });
 
 // Shrine
 addInteract(new THREE.Vector3(2.0, 1.2, -2.0), 0.8, "Look at the shrine", ()=>{
-  if(!state.notesFound.journal){
-    showSub("A butsudan. A small memorial tablet. The name is worn away.");
-  }
+  showSub("A butsudan. A small memorial tablet. The name is worn away.");
 });
 
-// Journal page — appears in closet after opening (Note 3)
+// Journal page (Note 3) — appears in closet after opening
 const journalPageGroup = new THREE.Group();
 {
   const pm = new THREE.MeshStandardMaterial({ color:0xd8c9a8, roughness:0.9, side:THREE.DoubleSide });
@@ -1423,32 +1242,26 @@ const journalPageGroup = new THREE.Group();
   journalPageGroup.visible = false;
   world.add(journalPageGroup);
 }
-// Journal interactable (only when visible)
 addInteract(new THREE.Vector3(0.1, 0.4, -6.7), 0.7, "Read the torn page", ()=>{
   if(!journalPageGroup.visible) return;
   if(state.notesFound.journal) return;
   state.notesFound.journal = true;
-  showNote("A torn journal page", "...the father did it. The mother did it. They were both very tired. The child watched. The child waited. The child is still waiting.\n\nThe closet is not a closet. It is where they were kept.\n\nIf you hear two at the door at 3:00, do not open it. If you hear one, it is not them. It is not anyone. Do not open it.");
+  showNote("A torn journal page", "");
   noteFlash("Note added to your notebook");
   audio.bellChime();
   renderNotes();
 });
 
-// Drawing on shoji (Note 2) — becomes visible after a beat, drawn from the *other* side
-// We'll place a decal plane on the back room side of the shoji that becomes visible later.
+// Drawing (Note 2) — appears on shoji back side after a beat
 const drawingGroup = new THREE.Group();
 {
   const canvas = document.createElement('canvas'); canvas.width = 256; canvas.height = 256;
   const dctx = canvas.getContext('2d');
   dctx.fillStyle = '#d8ceb0'; dctx.fillRect(0,0,256,256);
-  // child's drawing — stick figures
   dctx.strokeStyle = '#5a1a1a'; dctx.lineWidth = 3;
-  // ground line
   dctx.beginPath(); dctx.moveTo(20,200); dctx.lineTo(236,200); dctx.stroke();
-  // house
   dctx.strokeRect(40,140,80,60);
   dctx.beginPath(); dctx.moveTo(40,140); dctx.lineTo(80,110); dctx.lineTo(120,140); dctx.stroke();
-  // four figures
   const drawFigure = (x,y,scale,scratch) => {
     dctx.beginPath(); dctx.arc(x, y-14*scale, 6*scale, 0, Math.PI*2); dctx.stroke();
     dctx.beginPath(); dctx.moveTo(x, y-8*scale); dctx.lineTo(x, y+8*scale); dctx.stroke();
@@ -1457,7 +1270,6 @@ const drawingGroup = new THREE.Group();
     dctx.beginPath(); dctx.moveTo(x, y+8*scale); dctx.lineTo(x-5*scale, y+16*scale); dctx.stroke();
     dctx.beginPath(); dctx.moveTo(x, y+8*scale); dctx.lineTo(x+5*scale, y+16*scale); dctx.stroke();
     if(scratch){
-      // scratch out figure
       for(let i=0;i<4;i++){
         dctx.beginPath();
         dctx.moveTo(x-10, y-15 + i*8);
@@ -1468,27 +1280,24 @@ const drawingGroup = new THREE.Group();
   };
   drawFigure(150, 160, 1.0, false);
   drawFigure(175, 160, 1.0, false);
-  drawFigure(200, 160, 0.7, false); // child
-  drawFigure(225, 160, 1.0, true);  // scratched
-  // text
+  drawFigure(200, 160, 0.7, false);
+  drawFigure(225, 160, 1.0, true);
   dctx.fillStyle = '#5a1a1a'; dctx.font = 'italic 16px Courier New'; dctx.textAlign = 'center';
   dctx.fillText('405', 128, 230);
   const tex = new THREE.CanvasTexture(canvas);
   tex.colorSpace = THREE.SRGBColorSpace;
   const mat = new THREE.MeshBasicMaterial({ map:tex, transparent:true, opacity:0, side:THREE.DoubleSide });
   const plane = new THREE.Mesh(new THREE.PlaneGeometry(1.4,1.4), mat);
-  plane.position.set(0, 1.2, -3.1); // just behind the shoji, in the back room
+  plane.position.set(0, 1.2, -3.1);
   world.add(plane);
-  drawingGroup.add(plane);
   window.__drawingMat = mat;
 }
 
-// Add drawing interactable
 addInteract(new THREE.Vector3(0, 1.2, -3.1), 0.9, "Read what is drawn", ()=>{
   if(!state.notesFound.drawing) return;
   if(!state.beats.readDrawing){
     state.beats.readDrawing = true;
-    showNote("A child's drawing", "A family. Four figures. A house. The number 405.\n\nOne figure has been scratched out, again and again, until the paper tore.");
+    showNote("A child's drawing", "");
     renderNotes();
   }
 });
@@ -1510,18 +1319,16 @@ function noteFlash(text){
   clearTimeout(noteFlashTimer);
   noteFlashTimer = setTimeout(()=>noteFlashEl.classList.remove('show'), 2400);
 }
+function showNote(title, text){
+  // Just flash — the note is auto-added to the log
+  noteFlash(title + " added");
+}
 
 /* ============================ NOTE LOG ============================ */
 const notelogEl = document.getElementById('notelog');
 const notesListEl = document.getElementById('notesList');
 const decisionsListEl = document.getElementById('decisionsList');
 
-function showNote(title, text){
-  const notelogEl2 = document.getElementById('notelog');
-  const existing = state.notesFound;
-  // Just flash a notification; the note is added to the log
-  noteFlash(title + " added");
-}
 function renderNotes(){
   const found = [];
   if(state.notesFound.landlord) found.push({title:"Landlord's note", text:"Welcome to 405.\n\nThe rent is low because the last tenant left in a hurry. Please do not open the closet in the back room. There is nothing in it worth seeing.\n\nThe other tenants keep to themselves. If the doorbell rings after midnight, do not answer it. They know not to visit.\n\n— Manager"});
@@ -1548,10 +1355,7 @@ function toggleNotes(){
   if(state.notesOpen){ renderNotes(); audio.uiClick(); }
 }
 
-/* ============================ DOORBELL / PHONE / BEATS ============================ */
-// The scripted beats are driven by gameClock (real seconds since start).
-// Each beat fires once when gameClock crosses a threshold.
-
+/* ============================ SCRIPTED BEATS ============================ */
 const BEATS = [
   { id:'doorbell',  at: 90,  fn: beatDoorbell },
   { id:'phone',     at: 220, fn: beatPhone },
@@ -1563,7 +1367,7 @@ const BEATS = [
   { id:'dawn',      at: 900, fn: beatDawn },
 ];
 
-function fireBeats(dt){
+function fireBeats(){
   const t = state.gameClock;
   for(const b of BEATS){
     if(!state.beats[b.id] && t >= b.at){
@@ -1576,27 +1380,22 @@ function fireBeats(dt){
 function beatDoorbell(){
   audio.doorbell();
   showSub("The doorbell rings.");
-  // Silhouette appears behind the frosted glass after a moment
   setTimeout(()=>{
     sil1.visible = true;
     state.silDoor1 = true;
-    // If player looks at the door, add a beat
   }, 1500);
-  // Add decision interactable at door
   addInteract(new THREE.Vector3(-1.85, 1.2, 0), 0.9, "Open the door", ()=>{
     if(!sil1.visible) return;
-    state.decisions.door = "opened the door. There was no one there. The hallway light flickered.";
+    state.decisions.door = "opened the door. There was no one there. The hallway light flickered";
     sil1.visible = false;
     showSub("You open the door. The hallway is empty. The cold comes in. You close it.");
-    logDecisionToJournal("door", "opened");
-    audio.thud();
     renderNotes();
+    audio.thud();
   }, false);
 }
 
 function beatPhone(){
   state.phoneRinging = true;
-  // ring for a while
   let rings = 0;
   const ringInterval = setInterval(()=>{
     if(!state.phoneRinging || rings>=6){ clearInterval(ringInterval); return; }
@@ -1604,12 +1403,10 @@ function beatPhone(){
     rings++;
   }, 1800);
   showSub("The phone is ringing.");
-  // If not answered within 15s, it stops, and a decision is logged
   setTimeout(()=>{
     if(state.phoneRinging){
       state.phoneRinging = false;
       state.decisions.phone = "did not answer";
-      logDecisionToJournal("phone", "ignored");
       renderNotes();
       showSub("The phone stops ringing.");
     }
@@ -1617,9 +1414,7 @@ function beatPhone(){
 }
 
 function beatDrawing(){
-  // Show the drawing on the shoji back side — visible as a shadow through the paper
   if(window.__drawingMat){
-    // tween opacity
     const t0 = performance.now();
     function step(){
       const p = Math.min(1, (performance.now()-t0)/2400);
@@ -1638,7 +1433,6 @@ function beatFlicker(){
   showSub("The lights flicker.");
   state.flickerActive = true;
   state.flickerTimer = 2.2;
-  // also: if shoji was closed, open it now (regardless)
   if(!state.shojiOpen){
     setTimeout(()=>{
       openShoji();
@@ -1653,9 +1447,7 @@ function beatBackNoise(){
   audio.thud();
   showSub("Something falls in the back room.");
   setTimeout(()=>{
-    // the journal page appears on the floor of the closet area
     journalPageGroup.visible = true;
-    // small voice
     if(audio.ctx && !audio.muted){
       const t = audio.ctx.currentTime;
       const o = audio.ctx.createOscillator(); o.type='sine'; o.frequency.value=800;
@@ -1668,35 +1460,31 @@ function beatBackNoise(){
 }
 
 function beatShrineOut(){
-  // shrine lamp goes out
   if(shrineLampLight) shrineLampLight.intensity = 0;
   if(shrineLampMesh) shrineLampMesh.visible = false;
   showSub("The shrine lamp has gone out. The room is darker.");
   audio.silenceBed(4);
-  // add decision
   addInteract(new THREE.Vector3(2.0, 1.2, -2.0), 0.8, "Relight the shrine lamp", ()=>{
     if(shrineLampLight) shrineLampLight.intensity = 3;
     if(shrineLampMesh) shrineLampMesh.visible = true;
     state.decisions.shrine = "relit the shrine lamp";
     showSub("You light the shrine lamp. It holds. You feel warmer.");
-    logDecisionToJournal("shrine", "relit");
     renderNotes();
     audio.bellChime();
   }, false);
 }
 
 function beatClock3(){
-  // Clock jumps to 3:00 (visible in HUD)
   state.clockDisplay = "3:00";
   state.clockMin = 3*60;
   updateClockHUD();
-  // both silhouettes appear
   sil1.visible = true;
   sil2.visible = true;
   state.silFinal = true;
   showSub("It is 3:00 AM. Two silhouettes stand behind the frosted door. They are not moving.");
-  // final decision interactable
-  addInteract(new THREE.Vector3(-1.85, 1.2, 0), 0.9, "Open the door", ()=>{
+
+  // Two distinct choices, offset so both are reachable
+  addInteract(new THREE.Vector3(-1.85, 1.2, -0.45), 0.6, "Open the door", ()=>{
     state.decisions.final = "opened the door";
     sil1.visible = false;
     sil2.visible = false;
@@ -1704,7 +1492,7 @@ function beatClock3(){
     showSub("You open the door. The hallway is empty. There is a small wet footprint on the floor.");
     renderNotes();
   }, false);
-  addInteract(new THREE.Vector3(-1.85, 1.2, 0.3), 0.9, "Stay still and wait", ()=>{
+  addInteract(new THREE.Vector3(-1.85, 1.2, 0.45), 0.6, "Stay still and wait", ()=>{
     state.decisions.final = "stayed still";
     setTimeout(()=>{
       sil1.visible = false;
@@ -1717,11 +1505,6 @@ function beatClock3(){
 
 function beatDawn(){
   triggerEnding();
-}
-
-function logDecisionToJournal(key, value){
-  state.decisions[key] = value;
-  renderNotes();
 }
 
 /* ============================ PLAYER CONTROLS ============================ */
@@ -1855,7 +1638,7 @@ function triggerEnding(){
   const endSub = document.getElementById('endSub');
   const allNotes = state.notesFound.landlord && state.notesFound.drawing && state.notesFound.journal;
   const correctDecisions = [
-    state.decisions.door === "did not answer" || state.decisions.door === "opened the door. There was no one there. The hallway light flickered.",
+    state.decisions.door === "opened the door. There was no one there. The hallway light flickered" || state.decisions.door === "did not answer",
     state.decisions.phone === "did not answer" || state.decisions.phone === "answered",
     state.decisions.shrine === "relit the shrine lamp",
     state.decisions.final === "stayed still",
@@ -1877,6 +1660,13 @@ function triggerEnding(){
   audio.setRainLevel(0.05);
 }
 
+/* ============================ CLOCK HUD ============================ */
+function updateClockHUD(){
+  const el = document.getElementById('clockHud');
+  const display = state.clockDisplay;
+  el.innerHTML = `${display} <span class="am">${state.clockMin < 3*60 ? 'PM' : 'AM'}</span>`;
+}
+
 /* ============================ MAIN LOOP ============================ */
 let lastT = performance.now();
 function animate(){
@@ -1886,7 +1676,6 @@ function animate(){
   lastT = now;
 
   if(state.running && !state.paused && !state.notesOpen && !state.ending){
-    // movement
     const speed = 2.4;
     const forward = new THREE.Vector3(-Math.sin(state.yaw), 0, -Math.cos(state.yaw));
     const right = new THREE.Vector3(Math.cos(state.yaw), 0, -Math.sin(state.yaw));
@@ -1920,16 +1709,16 @@ function animate(){
     fireBeats();
 
     // clock HUD
-    if(state.clockDisplay === "11:47"){
-      // slowly advance clock from 11:47 PM up to 3:00 AM
-      const totalGame = 900; // 15 min
-      const minsElapsed = (state.gameClock / totalGame) * (4*60 + 13); // 11:47→3:00 is 3h13m
+    if(!state.beats.clock3){
+      const totalGame = 900;
+      const minsElapsed = (state.gameClock / totalGame) * (4*60 + 13);
       let displayMin = 11*60+47 + minsElapsed;
       displayMin = displayMin % (24*60);
       let hh = Math.floor(displayMin/60) % 12;
       if(hh === 0) hh = 12;
       const mm = Math.floor(displayMin % 60);
       state.clockDisplay = `${hh}:${mm.toString().padStart(2,'0')}`;
+      state.clockMin = Math.floor(displayMin);
     }
     updateClockHUD();
 
@@ -1944,13 +1733,9 @@ function animate(){
       }
     }
 
-    // balcony glass shader time
     if(window.__balconyGlass) window.__balconyGlass.uniforms.uTime.value += dt;
-
-    // spatialize rain to balcony proximity
     audio.spatializeRain(state.playerPos.x);
 
-    // silhouette behind the door: subtle breathing / sway
     if(sil1.visible) sil1.position.x = -2.55 + Math.sin(state.gameClock*0.8)*0.01;
     if(sil2.visible) sil2.position.x = -2.85 + Math.sin(state.gameClock*0.7+1)*0.01;
   }
@@ -1958,14 +1743,6 @@ function animate(){
   composer.render();
 }
 animate();
-
-/* ============================ CLOCK HUD ============================ */
-function updateClockHUD(){
-  const el = document.getElementById('clockHud');
-  const display = state.clockDisplay;
-  const isPM = display.startsWith('11') || display.startsWith('12') || parseInt(display.split(':')[0]) >= 6;
-  el.innerHTML = `${display} <span class="am">${state.clockMin < 3*60 ? 'PM' : 'AM'}</span>`;
-}
 
 /* ============================ START ============================ */
 document.getElementById('btnStart').addEventListener('click', ()=>{
@@ -1983,15 +1760,9 @@ document.getElementById('btnStart').addEventListener('click', ()=>{
 });
 
 renderNotes();
-spawnEdgeFigureIfNeeded();
-
-function spawnEdgeFigureIfNeeded(){ /* no edge figure in this build */ }
-
-// initialize camera
 camera.position.set(state.playerPos.x, 1.55, state.playerPos.z);
 camera.rotation.order = 'YXZ';
 camera.rotation.y = state.yaw;
-
 </script>
 </body>
 </html>
